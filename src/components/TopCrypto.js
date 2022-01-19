@@ -15,7 +15,7 @@ const TopCrypto = ({ crypto }) => {
       </Title>
       <Group>
         {datas.map((data) => (
-          <Paper data={data} key={data.id} />
+          <Paper data={data} key={data.uuid} />
         ))}
       </Group>
     </Container>

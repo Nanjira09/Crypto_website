@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const Paper = ({ data }) => {
   return (
-    <Link to={`/crypto/${data.id}`}>
+    <Link to={`/crypto/${data.uuid}`}>
       <Container>
         <Head>
           <p>

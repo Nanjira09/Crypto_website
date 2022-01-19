@@ -13,9 +13,9 @@ const Header = () => {
         <Link to="/crypto">
           <li>Cryptocurrency</li>
         </Link>
-        <Link to="/exchanges">
+        {/* <Link to="/exchanges">
           <li>Exchanges</li>
-        </Link>
+        </Link> */}
       </Ul>
     </Nav>
   );
@@ -33,7 +33,7 @@ const Nav = styled.div`
 
 const Ul = styled.ul`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   list-style: none;
   width: 70%;
   color: #f9f9f9;

@@ -21,17 +21,17 @@ const OtherInfo = ({ coin }) => {
         </Paper>
         <Paper>
           <p>Approved Supply</p>
-          <span>{coin.approvedSupply.toString()}</span>
+          <span>{coin.supply.confirmed.toString()}</span>
         </Paper>
         <Paper>
           <p>Total Supply</p>
           <span>
-            ${coin.totalSupply !== null ? millify(coin.totalSupply) : "0"}
+            ${coin.totalSupply !== null ? millify(coin.supply.total) : "0"}
           </span>
         </Paper>
         <Paper>
           <p>Circulating Supply</p>
-          <span>${millify(coin.circulatingSupply)}</span>
+          <span>${millify(coin.supply.circulating)}</span>
         </Paper>
       </Group>
     </>
