@@ -8,12 +8,15 @@ import CryptoDetail from "./components/CryptoDetail";
 // import Exchanges from "./components/Exchanges";
 function App() {
   const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(false);
   // const [exchanges, setExchanges] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
+      setLoading(true);
       const response = await axios.get("/coins");
       setData(response.data);
+      setLoading(false);
     };
     // const fetchExchanges = async () => {
     //   const response = await axios.get("/exchanges");
@@ -29,10 +32,18 @@ function App() {
       <Header />
       <Switch>
         <Route path="/" exact>
-          {data && <Homepage data={data} />}
+          {loading ? (
+            <p style={{ textAlign: "center" }}>Loading...</p>
+          ) : (
+            data && <Homepage data={data} />
+          )}
         </Route>
         <Route path="/crypto" exact>
-          {data && <Crypto data={data} />}
+          {loading ? (
+            <p style={{ textAlign: "center" }}>Loading...</p>
+          ) : (
+            data && <Crypto data={data} />
+          )}
         </Route>
         <Route path="/crypto/:id" exact>
           <CryptoDetail />
