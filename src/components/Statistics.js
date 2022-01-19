@@ -21,7 +21,7 @@ const Statistics = ({ coin }) => {
         </Paper>
         <Paper>
           <p>24h Volume</p>
-          {/* <span>${millify(coin.24hVolume)}</span> */}
+          <span>${millify(coin["24hVolume"])}</span>
         </Paper>
         <Paper>
           <p>Market Cap</p>
