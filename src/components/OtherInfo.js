@@ -26,7 +26,7 @@ const OtherInfo = ({ coin }) => {
         <Paper>
           <p>Total Supply</p>
           <span>
-            ${coin.totalSupply !== null ? millify(coin.supply.total) : "0"}
+            ${coin.supply.total !== null ? millify(coin.supply.total) : "0"}
           </span>
         </Paper>
         <Paper>
